@@ -8,18 +8,15 @@ import { HousingLocation } from '../housing-location';
   imports: [CommonModule, HousingLocationComponent],
   template: `
   <section>
-    <form class="row">
+  <form>
+    <input type="text" placeholder="Filter by city" />
+    <button class="primary" type="button">Search</button>
+  </form>
+</section>
+<section class="results">
+  <app-housing-location></app-housing-location>
+</section>
 
-<div class="imput-group mb-3">
-
-    <input type="text" class="form-control" placeholder="filter by city" aria-label="filter by city">
-    <button class="btn btn-primary" type="button" >Search</button>
-</div>
-    </form>
-  </section>
-  <section class="results">
-  <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
-  </section>
   `,
   styleUrls: ['./home.component.css'],
 })
